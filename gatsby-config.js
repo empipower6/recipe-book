@@ -17,6 +17,15 @@ module.exports = {
         token: process.env.GRAPHCMS_TOKEN
       },
   },{
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Emre's Recipe Book`,
+      short_name: `starter`,
+      display: `minimal-ui`,
+      icon: `src/images/kasik.png`, // This path is relative to the root of the site.
+      }
+    },
+    {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
