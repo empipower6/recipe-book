@@ -18,10 +18,6 @@ const IndexPage = ({data}) => {
           content: `Website to store the recipes I collected from many places I've been and many people I've met`,
         },
         {
-          meta:'icon',
-          href:`../images/icon.png`
-        },
-        {
           property: `og:title`,
           content: `Emre's Recipes`,
         },
