@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&family=Cardo:wght@400;700&display=swap');
+
+.title{
+    padding:10px 110px;
+    margin:0;
+    font-family: 'Mohave', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 83.4%;
+    margin-top:20px;
+
+}
+.greySection{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    margin:0;
+    background-color:#F0F0F0;
+    padding:0 0 0 110px;
+    position:relative;
+    
+
+    .ingredientsSection{
+        display:flex;
+        flex-flow:column nowrap;
+
+        h2{
+            margin:0;
+            font-family: 'Mohave', sans-serif;
+            font-weight:200;
+            font-size:30px;
+
+        }
+        .listItem{
+            font-family: 'Cardo', serif;
+            color: #000;
+            font-size: 16px;
+            font-weight:400;
+        }
+    }
+
+    .imageWrapperOut{
+        width:30%;
+        display:flex;
+        justify-content: flex-end;
+        align-items:center;
+        .imageWrapperIn{
+            max-height:300px;
+            max-width:400px;
+            padding:30px 0;
+
+            .recipeImage{
+                max-height:300px;
+                max-width:400px;
+               
+            }
+        }
+        
+    }
+
+}
+
+.stepsWrapper{
+    padding:30px 110px 30px 110px;
+    
+    hr{
+        background:none;
+        border:.5px solid #C53232;
+    }
+ 
+    h2{
+        margin:0;
+        font-family: 'Mohave', sans-serif;
+        font-weight:200;
+        font-size:30px;
+    }
+    .steps{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:flex-start;
+        gap:2%;
+
+        .stepWithImage,.stepWithoutImage{
+            display:flex;
+            flex-flow:column nowrap;
+            padding:20px 0;
+            p{
+                font-family: 'Cardo', serif;
+                color: #000;
+                font-size: 20px;
+                font-weight:400;
+                margin:0;
+            }
+        }
+        .stepWithoutImage{
+            width:100%;
+        }
+        .stepWithImage{
+            width:32%;
+            p{
+                padding-top:5px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) { 
+    .title{
+        padding:0 50px;
+
+    }
+    .greySection{
+        padding:0 0 0 50px;
+        .ingredientsSection{  
+            width:50%;
+            .listItem{
+                font-size: 20px;
+            }
+        }
+        .imageWrapperOut{
+            width:50%;    
+        }
+    
+    }
+    .stepsWrapper{
+        padding:30px 50px 30px 50px;
+       
+        .steps{
+            .stepWithImage,.stepWithoutImage{
+                p{
+                    
+                    font-size: 22px;
+                    
+                }
+            }
+            
+            .stepWithImage{
+                width:49%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 600px) { 
+
+    .title{
+        padding:10px 20px;
+
+    }
+    .greySection{
+        padding:0 0 0 20px;
+        flex-flow:column nowrap;
+        .ingredientsSection{  
+            width:100%;
+            .listItem{
+                font-size: 22px;
+            }
+        }
+        .imageWrapperOut{
+            width:95%;
+            justify-content: center;
+            align-items:center;
+            .imageWrapperIn{
+                max-height:300px;
+                max-width:400px;
+                padding:0 0 30px 0;
+                text-align:right;
+            }
+        }
+    
+    }
+    .stepsWrapper{
+        padding:30px 20px 30px 20px;
+       
+        .steps{
+            .stepWithImage,.stepWithoutImage{
+                p{
+                    
+                    font-size: 24px;
+                    
+                }
+            }
+            
+            .stepWithImage{
+                width:100%;
+            }
+        }
+    }
+}

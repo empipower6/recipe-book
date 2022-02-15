@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+.card,.cardBig{
+    display:flex;
+    flex-flow:column nowrap;
+    margin-bottom:40px;
+    justify-content:space-between;
+    
+    .description{
+        
+        .cardCategory{
+            margin:0;
+            padding:0;
+            font-family: 'Playfair Display', serif;
+            color: #848080;
+            font-size: 15px;
+            font-weight:300;
+        }
+        .cardTitle{
+            margin:0;
+            padding:0;
+            font-family: 'Mohave', sans-serif;
+            font-size: 34px;
+            font-weight:200;
+            color:black;
+            margin-top:-3px;
+        }
+    }
+}
+.card{
+    
+    height:310px;
+    
+    .cardImage{
+        height:250px;
+    }
+    .description{
+        
+        .cardCategory{
+        
+            font-size: 14px;
+        }
+        .cardTitle{
+            
+            font-size: 28px;
+            margin-top:-5px;
+        }
+    }
+    
+}
+.cardBig{
+    height:400px;
+
+    .cardImage{
+        height:325px;
+    }
+}
+
+@media only screen and (max-width: 1200px) { 
+
+    .card,.cardBig{
+        height:300px;
+        justify-content:space-between;
+
+        .description{
+            .cardCategory{
+                font-size: 15px;
+            }
+            .cardTitle{
+                font-size: 34px;                
+            }
+        }
+        .cardImage{
+            height:250px;
+        }
+    }
+}
+@media only screen and (max-width: 600px) { 
+
+    .card,.cardBig{
+        height:300px;
+        justify-content:flex-start;
+        margin-bottom:20px;
+
+        .description{
+            .cardCategory{
+                font-size: 15px;
+            }
+            .cardTitle{
+                font-size: 34px;                
+            }
+        }
+        .cardImage{
+            height:250px;
+        }
+    }
+}

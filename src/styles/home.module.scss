@@ -1,0 +1,51 @@
+.cardsWrapper{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:25px;
+    padding:0 8%;
+
+    .width30{
+        width:32%;
+    }
+    .width48{
+        width: 49%;
+    }
+}
+body{
+    margin:0;
+}
+
+@media only screen and (max-width: 1200px) { 
+
+    .cardsWrapper{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-between;
+        align-items:center;
+        padding-top:25px;
+        .width30{
+            width:48%;
+        }
+        .width48{
+            width: 48%;
+        }
+    }
+}
+@media only screen and (max-width: 600px) { 
+
+    .cardsWrapper{
+        display:flex;
+        flex-flow:row wrap;
+        justify-content:space-between;
+        align-items:center;
+        padding-top:25px;
+        .width30{
+            width:100%;
+        }
+        .width48{
+            width: 100%;
+        }
+    }
+}
