@@ -12,6 +12,9 @@ const IndexPage = ({data}) => {
     <>
     <Helmet
       title={`Emre's Recipes`}
+      htmlAttributes={{
+        lang: 'en'
+      }}
       meta={[
         {
           name: `description`,
@@ -42,9 +45,9 @@ const IndexPage = ({data}) => {
           content: `Website to store the recipes I collected from many places I've been and many people I've met`,
         },
       ]} /><Layout>
-        <div class={styles.cardsWrapper}>
+        <div className={styles.cardsWrapper}>
           {data.allGraphCmsRecipe.nodes.map((node, index) => (
-            <div className={`${index > 1 ? styles.width30 : styles.width48}`}>
+            <div className={`${index > 1 ? styles.width30 : styles.width48}`} key={`card-${index}`}>
               <Card title={node.title}
                 category={node.categoryPicker}
                 image={node.mainImage}

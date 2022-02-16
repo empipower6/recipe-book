@@ -7,7 +7,7 @@ module.exports = {
       title: `Recipe Book`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-plugin-sass","gatsby-transformer-sharp",
+  plugins: ["gatsby-plugin-image",'gatsby-plugin-robots-txt', "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-plugin-sass","gatsby-transformer-sharp",
   {
     resolve: 'gatsby-source-graphcms',
       options: {

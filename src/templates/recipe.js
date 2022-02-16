@@ -14,6 +14,9 @@ export default function Recipe(props) {
   return (
     <><Helmet
       title={`${data.title} Recipe`}
+      htmlAttributes={{
+        lang: 'en'
+      }}
       meta={[
         {
           name: `description`,
@@ -50,8 +53,8 @@ export default function Recipe(props) {
           <div className={styles.ingredientsSection}>
             <h2>ingredients</h2>
             <div>
-              {data.ingredients.split('\n').map(item => (
-                <p className={styles.listItem}>{String(item).toLowerCase()}</p>
+              {data.ingredients.split('\n').map((item,index) => (
+                <p className={styles.listItem} key={`ingredients-${index}`}>{String(item).toLowerCase()}</p>
               ))}
             </div>
           </div>
@@ -69,7 +72,7 @@ export default function Recipe(props) {
           <hr />
           <div className={styles.steps}>
             {data.steps.map((step, index) => (
-              <div className={step.stepImage ? styles.stepWithImage : styles.stepWithoutImage}>
+              <div className={step.stepImage ? styles.stepWithImage : styles.stepWithoutImage} key={`${data.title} recipe step-${index}`}>
                 {step.stepImage ?
                   <div>
                     <GatsbyImage

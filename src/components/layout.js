@@ -8,9 +8,11 @@ const Layout = ({children}) => {
   return (
     <>
         <Link to='/'>
+          <a alt="Go Back to Homepage">
           <div className={styles.header}>
                   <Logo />
           </div>
+          </a>
         </Link>
         {children}
     </>
