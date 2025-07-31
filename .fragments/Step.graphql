@@ -38,11 +38,11 @@ fragment Step on Step {
     ... on Asset {
       remoteTypeName: __typename
       remoteId: id
-      locale
       stage
+      locale
     }
   }
-  scheduledIn {
+  scheduledIn(first: 100) {
     ... on ScheduledOperation {
       remoteTypeName: __typename
       remoteId: id

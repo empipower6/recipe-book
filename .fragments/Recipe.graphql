@@ -1,12 +1,12 @@
-fragment ScheduledOperation on ScheduledOperation {
+fragment Recipe on Recipe {
   stage
   remoteId: id
   createdAt
   updatedAt
   publishedAt
-  description
-  errorMessage
-  rawPayload
+  title
+  ingredients
+  slug
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -28,27 +28,24 @@ fragment ScheduledOperation on ScheduledOperation {
       stage
     }
   }
-  release {
-    ... on ScheduledRelease {
+  mainImage {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+      locale
+    }
+  }
+  steps(first: 100) {
+    ... on Step {
       remoteTypeName: __typename
       remoteId: id
       stage
     }
   }
-  status
-  affectedDocuments {
-    ... on Asset {
-      remoteTypeName: __typename
-      remoteId: id
-      locale
-      stage
-    }
-    ... on Recipe {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
-    ... on Step {
+  categoryPicker
+  scheduledIn(first: 100) {
+    ... on ScheduledOperation {
       remoteTypeName: __typename
       remoteId: id
       stage

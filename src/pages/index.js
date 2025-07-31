@@ -46,7 +46,7 @@ const IndexPage = ({data}) => {
         },
       ]} /><Layout>
         <div className={styles.cardsWrapper}>
-          {data.allGraphCmsRecipe.nodes.map((node, index) => (
+          {data.allHygraphRecipe.nodes.map((node, index) => (
             <div className={`${index > 1 ? styles.width30 : styles.width48}`} key={`card-${index}`}>
               <Card title={node.title}
                 category={node.categoryPicker}
@@ -64,23 +64,13 @@ export default IndexPage
 
 export const query = graphql`
 query MyQuery {
-  allGraphCmsRecipe(sort: {fields: createdAt, order: DESC}) {
+  allHygraphRecipe(sort: {createdAt: DESC}) {
     nodes {
       title
       slug
       categoryPicker
-      ingredients
-      steps {
-        explanation {
-          text
-        }
-        stepNumber
-        stepImage {
-          gatsbyImageData(placeholder: BLURRED)
-        }
-      }
       mainImage {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, formats: NO_CHANGE)
       }
     }
   }

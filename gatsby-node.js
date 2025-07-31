@@ -3,7 +3,7 @@ exports.createPages = async function ({ actions, graphql }) {
     const result = await graphql(
         `
           {
-            allGraphCmsRecipe {
+            allHygraphRecipe {
               edges {
                 node {
                     title
@@ -16,11 +16,11 @@ exports.createPages = async function ({ actions, graphql }) {
                       }
                       stepNumber
                       stepImage {
-                        gatsbyImageData(placeholder: BLURRED)
+                        gatsbyImageData(placeholder: BLURRED, formats: NO_CHANGE)
                       }
                     }
                     mainImage {
-                      gatsbyImageData(placeholder: BLURRED)
+                      gatsbyImageData(placeholder: BLURRED, formats: NO_CHANGE)
                     }
                   }
               }
@@ -28,7 +28,7 @@ exports.createPages = async function ({ actions, graphql }) {
           }
         `
       )
-    result.data.allGraphCmsRecipe.edges.forEach(({node})=> {
+    result.data.allHygraphRecipe.edges.forEach(({node})=> {
       
       actions.createPage({
         path: node.slug,

@@ -7,18 +7,17 @@ module.exports = {
       title: `Recipe Book`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-image",'gatsby-plugin-robots-txt', "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-plugin-sass","gatsby-transformer-sharp",
-  {
-    resolve: 'gatsby-source-graphcms',
+  plugins: ["gatsby-plugin-image",'gatsby-plugin-robots-txt', "gatsby-plugin-sharp", "gatsby-plugin-sass","gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-plugin-hygraph',
       options: {
-        // Your GraphCMS API endpoint. Available from your project settings.
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
-        // A PAT (Permanent Auth Token) for your project. Required if your project is not available publicly, or you want to scope access to a specific content stage (i.e. draft content).
-        token: process.env.GRAPHCMS_TOKEN
-      },
-  },{
-    resolve: `gatsby-plugin-manifest`,
-    options: {
+        endpoint: process.env.HYGRAPH_ENDPOINT,
+        token: process.env.HYGRAPH_TOKEN
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
       name: `Emre's Recipe Book`,
       short_name: `starter`,
       display: `minimal-ui`,
